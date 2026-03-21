@@ -1,1 +1,2 @@
 0 8 * * * /bin/bash /home/tomoyuki/scripts/fetch_ai_news.sh
+30 3 * * * /home/tomoyuki/.openclaw/workspace/scripts/shizuku_backup.sh >> /home/tomoyuki/openclaw-shizuku-backup/runtime/backup.log 2>&1
