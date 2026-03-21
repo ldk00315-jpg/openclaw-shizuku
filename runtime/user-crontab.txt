@@ -1,0 +1,1 @@
+0 8 * * * /bin/bash /home/tomoyuki/scripts/fetch_ai_news.sh
