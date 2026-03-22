@@ -1,3 +1,4 @@
 0 8 * * * /bin/bash /home/tomoyuki/scripts/fetch_ai_news.sh
 30 3 * * * /home/tomoyuki/.openclaw/workspace/scripts/shizuku_backup.sh >> /home/tomoyuki/openclaw-shizuku-backup/runtime/backup.log 2>&1
 5 * * * * /home/tomoyuki/.openclaw/workspace/scripts/check_usdjpy_notify.sh >> /home/tomoyuki/.openclaw/workspace/memory/usdjpy-cron.log 2>&1
+10 * * * * /home/tomoyuki/.openclaw/workspace/scripts/collect_today_indicators.py >> /home/tomoyuki/.openclaw/workspace/memory/today-indicators.log 2>&1

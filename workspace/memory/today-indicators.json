@@ -1,0 +1,37 @@
+{
+  "updatedAt": "2026-03-23 03:10:01 JST",
+  "fx": {
+    "USDJPY": 158.968197
+  },
+  "indices": {
+    "Dow": 45577.47,
+    "NASDAQ": 21647.61,
+    "SP500": 6506.48,
+    "Nikkei225": 53372.53,
+    "TOPIX": 3609.4
+  },
+  "commodities": {
+    "WTI": 98.23
+  },
+  "weather": {
+    "Komagane": {
+      "maxTempC": "12",
+      "minTempC": "-2",
+      "summary": "Patchy rain nearby"
+    }
+  },
+  "changes": {
+    "indicesPct": {
+      "Dow": 0.0,
+      "NASDAQ": 0.0,
+      "SP500": 0.0,
+      "Nikkei225": 0.0,
+      "TOPIX": 0.0
+    },
+    "weatherDiff": {
+      "KomaganeMaxTempC": 0.0,
+      "KomaganeMinTempC": 0.0
+    }
+  },
+  "errors": []
+}
