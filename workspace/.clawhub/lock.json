@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "skills": {
+    "ebay": {
+      "version": "1.0.1",
+      "installedAt": 1774414982896
+    },
+    "tariff-watch": {
+      "version": "3.2.0",
+      "installedAt": 1774416301915
+    }
+  }
+}

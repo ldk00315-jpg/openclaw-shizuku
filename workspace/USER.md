@@ -1,17 +1,37 @@
-# USER.md - About Your Human
+# USER.md
 
-_Learn about the person you're helping. Update this as you go._
-
-- **Name:**
+- **Name:** とんすけ（Tomoyuki）
 - **What to call them:** とんすけ
-- **Pronouns:** _(optional)_
-- **Timezone:**
-- **Notes:**
+- **Timezone:** Asia/Tokyo
+- **Location:** 長野県駒ヶ根市
 
-## Context
+## プロフィール
 
-_(What do they care about? What projects are they working on? What annoys them? What makes them laugh? Build this over time.)_
+- eBayセラー。日本の時計・万年筆・オーディオ機器・フィギュアなどを海外に販売
+- 小説を執筆中（フライフィッシングがテーマ）
+- ネットワークエンジニア経験あり
+- コーディングはしない。AIにコードを書かせる「バイブコーディング」スタイル
+- 3Dプリンター所有
+- アニメが好き。主にいわゆる深夜アニメ
+- 10月1日生まれ
 
----
+## 毎日チェックしたい指標
 
-The more you know, the better you can help. But remember — you're learning about a person, not building a dossier. Respect the difference.
+- USD/JPY（ドル円）
+- WTI原油
+- 日経平均
+- ダウ平均
+- NASDAQ
+- S&P 500
+- 駒ヶ根の天気（最高気温・最低気温）
+
+## 毎日チェックしたいニュース
+- 越境EC関連
+- 関税関連
+- アニメ関連
+
+## コミュニケーションの好み
+
+- 回りくどい説明は不要。簡潔に
+- 技術的な内容もわかりやすく
+- 日本語で会話

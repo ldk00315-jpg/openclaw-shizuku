@@ -1,36 +1,36 @@
 {
-  "updatedAt": "2026-03-25 03:10:01 JST",
+  "updatedAt": "2026-03-26 03:10:01 JST",
   "fx": {
-    "USDJPY": 158.629091
+    "USDJPY": 158.76816
   },
   "indices": {
-    "Dow": 46215.89,
-    "NASDAQ": 21787.563,
-    "SP500": 6564.9,
-    "Nikkei225": 52252.28,
-    "TOPIX": 3559.67
+    "Dow": 46493.21,
+    "NASDAQ": 21964.52,
+    "SP500": 6603.76,
+    "Nikkei225": 53749.62,
+    "TOPIX": 3650.99
   },
   "commodities": {
-    "WTI": 92.06
+    "WTI": 90.26
   },
   "weather": {
     "Komagane": {
-      "maxTempC": "12",
-      "minTempC": "-2",
-      "summary": "Patchy rain nearby"
+      "maxTempC": "7",
+      "minTempC": "5",
+      "summary": "Mist"
     }
   },
   "changes": {
     "indicesPct": {
-      "Dow": 0.1374357943216901,
-      "NASDAQ": 0.13516312091549518,
-      "SP500": 0.11697012305501063,
+      "Dow": 0.09390825624080347,
+      "NASDAQ": 0.056937809962917744,
+      "SP500": 0.08745087519078441,
       "Nikkei225": 0.0,
       "TOPIX": 0.0
     },
     "weatherDiff": {
-      "KomaganeMaxTempC": 0.0,
-      "KomaganeMinTempC": 0.0
+      "KomaganeMaxTempC": null,
+      "KomaganeMinTempC": null
     }
   },
   "errors": []
