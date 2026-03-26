@@ -8,6 +8,18 @@
     "tariff-watch": {
       "version": "3.2.0",
       "installedAt": 1774416301915
+    },
+    "agentmail": {
+      "version": "1.1.1",
+      "installedAt": 1774484221575
+    },
+    "self-improving-agent": {
+      "version": "3.0.6",
+      "installedAt": 1774504268793
+    },
+    "agent-browser": {
+      "version": "0.2.0",
+      "installedAt": 1774504475558
     }
   }
 }

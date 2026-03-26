@@ -5058,3 +5058,29 @@ branch 'main' set up to track 'origin/main'.
 To github.com:ldk00315-jpg/openclaw-shizuku.git
    e613815..45e74a3  main -> main
 branch 'main' set up to track 'origin/main'.
+[main d37208f] backup: 2026-03-26 03:30:01 JST
+ 28 files changed, 1283 insertions(+), 50 deletions(-)
+ create mode 100644 workspace/.clawhub/lock.json
+ create mode 100644 workspace/ebay-research-tool.skill
+ create mode 100644 workspace/memory/2026-03-25.md
+ create mode 100644 workspace/research_uk_products.csv
+ create mode 100644 workspace/skills/daily-indicators/SKILL.md
+ create mode 100644 workspace/skills/daily-indicators/__pycache__/fetch_indicators.cpython-312.pyc
+ create mode 100644 workspace/skills/daily-indicators/fetch_indicators.py
+ create mode 100644 workspace/skills/ebay-research-tool/SKILL.md
+ create mode 100644 workspace/skills/ebay-research-tool/references/category_keywords.md
+ create mode 100644 workspace/skills/ebay-research-tool/references/country_codes.md
+ create mode 100644 workspace/skills/ebay/.clawhub/origin.json
+ create mode 100644 workspace/skills/ebay/SKILL.md
+ create mode 100644 workspace/skills/ebay/_meta.json
+ create mode 100644 workspace/skills/ebay/listing.md
+ create mode 100644 workspace/skills/ebay/pricing.md
+ create mode 100644 workspace/skills/ebay/shipping.md
+ create mode 100644 workspace/skills/kyou-no-shihyou/kyou-no-shihyou/SKILL.md
+ create mode 100644 workspace/skills/tariff-watch/.clawhub/origin.json
+ create mode 100644 workspace/skills/tariff-watch/README.md
+ create mode 100644 workspace/skills/tariff-watch/SKILL.md
+ create mode 100644 workspace/skills/tariff-watch/_meta.json
+To github.com:ldk00315-jpg/openclaw-shizuku.git
+   45e74a3..d37208f  main -> main
+branch 'main' set up to track 'origin/main'.
