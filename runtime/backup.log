@@ -5084,3 +5084,51 @@ branch 'main' set up to track 'origin/main'.
 To github.com:ldk00315-jpg/openclaw-shizuku.git
    45e74a3..d37208f  main -> main
 branch 'main' set up to track 'origin/main'.
+[main df73a85] backup: 2026-03-27 03:30:01 JST
+ 50 files changed, 4930 insertions(+), 158 deletions(-)
+ create mode 100644 workspace/.learnings/troubleshooting/nemotron-stuck-fallback.md
+ create mode 100644 workspace/MEMORY.md
+ create mode 100644 workspace/agentmail-helper/SKILL.md
+ create mode 100644 workspace/memory/2026-03-26.md
+ create mode 100644 workspace/memory/decisions/2026-03.md
+ create mode 100644 workspace/memory/projects/api-integration-debugging.md
+ create mode 100644 workspace/memory/projects/backup-system.md
+ create mode 100644 workspace/memory/projects/claude-code-installation.md
+ create mode 100644 workspace/memory/projects/ebay-market-research.md
+ create mode 100644 workspace/memory/projects/ebay-price-compare.md
+ create mode 100644 workspace/memory/projects/ebay-research-tool-skill.md
+ create mode 100644 workspace/memory/projects/today-indicators.md
+ create mode 100644 workspace/memory/projects/usdjpy-alert.md
+ create mode 100644 workspace/skills/agent-browser/.clawhub/origin.json
+ create mode 100644 workspace/skills/agent-browser/CONTRIBUTING.md
+ create mode 100644 workspace/skills/agent-browser/SKILL.md
+ create mode 100644 workspace/skills/agent-browser/_meta.json
+ create mode 100644 workspace/skills/agentmail/.clawhub/origin.json
+ create mode 100644 workspace/skills/agentmail/SKILL.md
+ create mode 100644 workspace/skills/agentmail/_meta.json
+ create mode 100644 workspace/skills/agentmail/references/API.md
+ create mode 100644 workspace/skills/agentmail/references/EXAMPLES.md
+ create mode 100644 workspace/skills/agentmail/references/WEBHOOKS.md
+ create mode 100644 workspace/skills/agentmail/scripts/check_inbox.py
+ create mode 100644 workspace/skills/agentmail/scripts/send_email.py
+ create mode 100644 workspace/skills/agentmail/scripts/setup_webhook.py
+ create mode 100644 workspace/skills/self-improving-agent/.clawhub/origin.json
+ create mode 100644 workspace/skills/self-improving-agent/.learnings/ERRORS.md
+ create mode 100644 workspace/skills/self-improving-agent/.learnings/FEATURE_REQUESTS.md
+ create mode 100644 workspace/skills/self-improving-agent/.learnings/LEARNINGS.md
+ create mode 100644 workspace/skills/self-improving-agent/SKILL.md
+ create mode 100644 workspace/skills/self-improving-agent/_meta.json
+ create mode 100644 workspace/skills/self-improving-agent/assets/LEARNINGS.md
+ create mode 100644 workspace/skills/self-improving-agent/assets/SKILL-TEMPLATE.md
+ create mode 100644 workspace/skills/self-improving-agent/hooks/openclaw/HOOK.md
+ create mode 100644 workspace/skills/self-improving-agent/hooks/openclaw/handler.js
+ create mode 100644 workspace/skills/self-improving-agent/hooks/openclaw/handler.ts
+ create mode 100644 workspace/skills/self-improving-agent/references/examples.md
+ create mode 100644 workspace/skills/self-improving-agent/references/hooks-setup.md
+ create mode 100644 workspace/skills/self-improving-agent/references/openclaw-integration.md
+ create mode 100644 workspace/skills/self-improving-agent/scripts/activator.sh
+ create mode 100644 workspace/skills/self-improving-agent/scripts/error-detector.sh
+ create mode 100644 workspace/skills/self-improving-agent/scripts/extract-skill.sh
+To github.com:ldk00315-jpg/openclaw-shizuku.git
+   d37208f..df73a85  main -> main
+branch 'main' set up to track 'origin/main'.

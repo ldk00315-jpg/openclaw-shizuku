@@ -1,51 +1,74 @@
 # Nemotron Stuck Fallback Issue and Recovery
 
-## Date: 2026-03-26
+## Date: 2026-03-26 (updated)
 
-## Symptoms
-- Fallback model openrouter/nvidia/nemotron-3-super-120b-a12b:free gets stuck once used
-- All subsequent requests stay on nemotron, never returning to higher-priority fallbacks
-- gateway restart, /reset, session clear do not fix it
+## 概要
+openrouter/nvidia/nemotron-3-super-120b-a12b:free が一度使われると、
+以降すべてのリクエストが nemotron に固定され、上位フォールバックに戻らなくなるバグ。
 
-## Root Cause
-- Unknown (logs unavailable)
-- Possibly OpenClaw caches lastGood model and keeps prioritizing it
+## 症状
+- Web UI のモデル表示が nemotron-3-super のまま変わらない
+- gateway restart しても解消しない
+- /reset やセッションクリアでも解消しない
+- google/gemini-2.5-flash が fallback #1 に設定されていてもスキップされる
 
-## Recovery Steps
+## 推定原因
+OpenClaw が最初に成功したフォールバックモデルを lastGood としてキャッシュし、
+以降のリクエストでそのモデルを優先的に使い続ける。
+根本原因は未特定（2026-03-26 時点）。
 
-### 1. Remove nemotron from fallbacks temporarily
-Edit openclaw.json fallbacks to:
-- google/gemini-2.5-flash
-- openrouter/arcee-ai/trinity-mini:free
-- openrouter/stepfun/step-3.5-flash:free
-- openrouter/google/gemini-2.5-flash
+## 発見の経緯
+trinity-mini をフォールバックから除外した際に nemotron が使われ始め、
+以降 Gemini に戻らなくなった。nemotron を一時除外したところ
+即座に Gemini が使われるようになり、スタックが原因と判明。
+（ユーザーの障害切り分け提案により特定）
 
-Then: openclaw gateway restart
+## 復旧手順
 
-### 2. Verify
-- Send test message via Telegram
-- Web UI should show gemini-2.5-flash google
+### Step 1: nemotron を一時的にフォールバックから除外
+以下の内容を /tmp/remove_nemotron.py として保存して実行:
 
-### 3. Restore nemotron after recovery
-Edit openclaw.json fallbacks to:
-- google/gemini-2.5-flash
-- openrouter/arcee-ai/trinity-mini:free
-- openrouter/nvidia/nemotron-3-super-120b-a12b:free
-- openrouter/stepfun/step-3.5-flash:free
-- openrouter/google/gemini-2.5-flash
+    import json
+    path = '/home/tomoyuki/.openclaw/openclaw.json'
+    with open(path) as f:
+        cfg = json.load(f)
+    fb = cfg['agents']['defaults']['model']['fallbacks']
+    fb_new = [m for m in fb if 'nemotron' not in m]
+    cfg['agents']['defaults']['model']['fallbacks'] = fb_new
+    with open(path, 'w') as f:
+        json.dump(cfg, f, indent=2)
+    print('Removed nemotron. New fallbacks:')
+    for m in fb_new:
+        print('  ' + m)
 
-Then: openclaw gateway restart
+### Step 2: gateway 再起動
+    openclaw gateway restart
 
-## Normal Model Config
-- Primary: openai-codex/gpt-5.3-codex
-- Fallback order:
-  1. google/gemini-2.5-flash - Google API direct, 500 req/day free
-  2. openrouter/arcee-ai/trinity-mini:free - 1.4s, fastest free
-  3. openrouter/nvidia/nemotron-3-super-120b-a12b:free - 120B, high quality
-  4. openrouter/stepfun/step-3.5-flash:free - 6s, long context
-  5. openrouter/google/gemini-2.5-flash - paid, last resort
+### Step 3: 動作確認
+Telegram でテストメッセージを送信。
+Web UI で gemini-2.5-flash / google と表示されることを確認。
 
-## Notes
-- Both openclaw.json models section and auth-profiles.json must have model entries
-- Mai env needed manual addition of google:default to auth-profiles.json
-- openrouter:manual profile caused issues on Mai (removed)
+### Step 4: nemotron を復元
+以下の内容を /tmp/restore_nemotron.py として保存して実行:
+
+    import json
+    path = '/home/tomoyuki/.openclaw/openclaw.json'
+    with open(path) as f:
+        cfg = json.load(f)
+    cfg['agents']['defaults']['model']['fallbacks'] = [
+        'google/gemini-2.5-flash',
+        'openrouter/nvidia/nemotron-3-super-120b-a12b:free',
+        'openrouter/stepfun/step-3.5-flash:free',
+        'openrouter/google/gemini-2.5-flash'
+    ]
+    with open(path, 'w') as f:
+        json.dump(cfg, f, indent=2)
+    print('Restored nemotron in fallbacks')
+
+その後 openclaw gateway restart を実行。
+
+## 注意
+- nemotron 自体の品質は高い（120B パラメータ）
+- 問題はモデルではなく OpenClaw のフォールバック固定バグ
+- 再発時は同じ手順で復旧可能
+- 詳細な構成情報: openclaw-model-config-reference.md 参照
